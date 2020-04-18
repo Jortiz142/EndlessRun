@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip crashSound;
     private AudioSource playerAudio;
+    private ScoreTracker scoreTracker;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         Physics.gravity *= gravityModifyer;
         playerAudio = GetComponent<AudioSource>();
+        scoreTracker = GameObject.Find("Player").GetComponent<ScoreTracker>();
     }
 
     // Update is called once per frame
@@ -53,6 +55,8 @@ public class PlayerController : MonoBehaviour
             explosionParticle.Play();
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, 1.0f);
+            scoreTracker.score /= 2;
+            scoreTracker.UpdateText();
         }
     }
 }
