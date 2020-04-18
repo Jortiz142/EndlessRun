@@ -22,7 +22,7 @@ public class ScoreTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerControllerScript.gameOver == false)
+        if(playerControllerScript.gameOver == false && playerControllerScript.finished == false)
         {
             scoreMultiplier = scoreMultiplier + .5f;
             score += Convert.ToInt32(Time.deltaTime * scoreMultiplier);

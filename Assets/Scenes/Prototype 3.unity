@@ -909,6 +909,7 @@ MonoBehaviour:
   dirtParticle: {fileID: 592218757}
   jumpSound: {fileID: 8300000, guid: 0f7d0b7c3397f4dac91f20e8a77d2d57, type: 3}
   crashSound: {fileID: 8300000, guid: 913d6445ee8cc4152a9c18da590ee203, type: 3}
+  finished: 0
 --- !u!65 &1264248392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1085,6 +1086,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 2863816942578847173, guid: a7a4b434eb5cb6d429aed6c7031ecc2a,
+    type: 3}
+  checkpointPrefab: {fileID: 2823763564715994180, guid: a3a8975947c23e144883940217e86cdc,
     type: 3}
 --- !u!4 &1770008367
 Transform:

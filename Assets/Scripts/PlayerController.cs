@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip crashSound;
     private AudioSource playerAudio;
     private ScoreTracker scoreTracker;
+    public bool finished = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +58,10 @@ public class PlayerController : MonoBehaviour
             playerAudio.PlayOneShot(crashSound, 1.0f);
             scoreTracker.score /= 2;
             scoreTracker.UpdateText();
+        }
+        else if (collision.gameObject.CompareTag("Finish"))
+        {
+            finished = true;
         }
     }
 }
