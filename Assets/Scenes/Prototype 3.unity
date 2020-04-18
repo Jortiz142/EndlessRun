@@ -1066,6 +1066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1770008367}
   - component: {fileID: 1770008366}
+  - component: {fileID: 1770008368}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -1087,8 +1088,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 2863816942578847173, guid: a7a4b434eb5cb6d429aed6c7031ecc2a,
     type: 3}
-  checkpointPrefab: {fileID: 2823763564715994180, guid: a3a8975947c23e144883940217e86cdc,
-    type: 3}
 --- !u!4 &1770008367
 Transform:
   m_ObjectHideFlags: 0
@@ -1103,6 +1102,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1770008368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770008365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5af3ad36e4394046a33acf1b0001a70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointPrefab: {fileID: 2823763564715994180, guid: a3a8975947c23e144883940217e86cdc,
+    type: 3}
 --- !u!1001 &2002120051
 PrefabInstance:
   m_ObjectHideFlags: 0
